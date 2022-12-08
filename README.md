@@ -2,21 +2,27 @@
 
 A simple converter that converts an Arabic number (e.g. `42`) to a Roman numeral (e.g. `XLII`).
 
-To run the tests, first install the development dependencies
+Requires [Poetry](https://python-poetry.org/) to install:
 
 ```sh
-pip install -r requirements-dev.txt
+poetry install --no-dev
 ```
 
-and then execute the tests with
+## Running the tests
+
+The tests consist of:
+
+* Unit tests using `pytest`
+* Static type checking using `mypy`
+
+To run the tests, first install the required packages using
 
 ```sh
-mypy .
-pytest
+poetry install
 ```
 
-or simply using (requires `GNU make`)
+Then run the tests with
 
 ```sh
-make test
+poetry run test
 ```
